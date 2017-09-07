@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.2.1.js"></script>
+<script type="text/javascript" >
+    $(document).ready(function () {
+        $("#p1").mouseover(function () {
+            $(this).css("background-color", "red");
+        });
+        $("#p2").mouseover(function () {
+            $(this).css("background-color", "orange");
+        });
+        $("jquery DONT check tags p").mouseover(function () {
+            $(this).css("background-color", "green");
+        });
+        $("#p1").mouseout(function () {
+            $(this).css("background-color", "white");
+        });
+        $("#p2").mouseout(function () {
+            $(this).css("background-color", "white");
+        });
+        $("jquery DONT check tags p").mouseout(function () {
+            $(this).css("background-color", "white");
+        });
+
+    });
+</script>
+</head>
+<body>
+    <p id="p1">Paragraph 1</p>
+    <p id="p2">Paragraph 2</p>
+    <jquery>
+        <DONT>
+            <check>
+                <tags>
+                    <p >Paragraph 3</p>
+                </tags>
+            </check>
+        </DONT>
+    </jquery>
+</body>
+</html>

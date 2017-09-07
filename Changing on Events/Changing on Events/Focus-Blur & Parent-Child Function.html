@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Focus/Blur & Parent/Child
+
+    </title>
+    <script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input").focus(function () {
+            $(this).parent().css("background-color", "orange");
+        });
+        $("input").blur(function () {
+            $(this).parent().css("background-color", "white");
+        });
+    });
+
+</script>
+</head>
+<body>
+    <form method="get" action="www.google.com">
+        <table width="100%">
+
+            <tr>
+                <td>
+                    Type Your Name
+                </td>
+                <td>
+                    <input type="text" />
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Type Your Password
+                </td>
+                <td>
+                    <input type="password" />
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    Type Your Date
+                </td>
+                <td>
+                    <input type="date" />
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td align="center">
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
