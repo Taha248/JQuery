@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Focus/Blur & Parent/Child
+
+    </title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#addItem").click(function () {
+                var name = $("#textName").val();
+                var number = $("#textNumber").val();
+                $("table").append("<tr><td align='center'>" + name + "</td><td align='center'>" + number + "</tr>");
+                $("tr:odd").css("background-color", "orange");
+                $("tr:even").css("background-color", "pink");
+                $("tr:first").css("background-color", "red");
+                $("tr:last").css("background-color", "blue");
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Add" id="addItem" />
+    <input type="text"  id="textName" />
+    <input type="number"  id="textNumber" />
+    <form method="get" action="www.google.com">
+        <table width="100%" align="center">
+            <tr>
+                <th>
+                    Name
+                </th>
+
+                <th>
+                    Phone Number
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

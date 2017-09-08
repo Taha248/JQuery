@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<script src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#selectall").click(function () {
+            $(":checkbox").prop("checked", true);
+
+            $(":radio").prop("checked", true);
+
+        });
+        $("#unselectall").click(function () { 
+            $(":checkbox").prop("checked", false);
+
+            $(":radio").prop("checked", false);
+
+        });
+    }
+    );
+
+</script>
+</head>
+<input type="button" value="Select All" id="selectall" />
+<input type="button" value="unSelect All" id="unselectall" />
+<br />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<br />
+<input type="radio" />
+<input type="radio" />
+<input type="radio" />
+<input type="radio" />
+<input type="radio" />
+<input type="radio" />
+<body>
+
+</body>
+</html>

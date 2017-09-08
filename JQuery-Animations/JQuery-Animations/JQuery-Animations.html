@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Animation</title>
+    <script src="jquery-3.2.1.js" >
+
+    </script>
+ <script type="text/javascript">
+     $(document).ready(function () {
+         var up = 0, down = 0, right = 0, left = 0;
+
+         $("#show").click(function () {
+             $("#box").show("slow");
+         });
+         $("#hide").click(function () {
+             $("#box").hide("slow");
+         });
+         $("#stoggle").click(function () {
+             $("#box").toggle("slow");
+         });
+         $("#fadeIn").click(function () {
+             $("#box").fadeIn("slow");
+         });
+         $("#fadeOut").click(function () {
+             $("#box").fadeOut("slow");
+         });
+         $("#ftoggle").click(function () {
+             $("#box").fadeToggle("slow");
+         });
+         $("#slideDown").click(function () {
+             $("#box").slideDown("slow");
+         });
+         $("#slideUp").click(function () {
+             $("#box").slideUp("slow");
+         });
+         $("#slideToggle").click(function () {
+             $("#box").slideToggle("slow");
+         });
+
+         
+
+         $("#up").click(function () {
+             up += 50;
+             $("#box").animate({bottom:up+"px"});
+         });
+         $("#down").click(function () {
+             down += 50;
+             $("#box").animate({ top: down+"px" });
+         });
+         $("#right").click(function () {
+             right += 50;
+             $("#box").animate({ left: right+"px" });
+         });
+         $("#left").click(function () {
+             left += 50;
+             $("#box").animate({ right: left+"px" });
+         });
+
+
+     });
+ </script>
+</head>
+<body>
+    <input type="button" value="Show" id="show" />
+    <input type="button" value="Hide" id="hide" />
+    <input type="button" value="Show Toggle" id="stoggle" />
+    <input type="button" value="FadeIn" id="fadeIn" />
+    <input type="button" value="FadeOut" id="fadeOut" />
+    <input type="button" value="FadeToggle" id="ftoggle" />
+    <input type="button" value="Slide Down" id="slideDown" />
+    <input type="button" value="Slide Up" id="slideUp" />
+    <input type="button" value="Left" id="left" />
+    <input type="button" value="Right" id="right" />
+    <input type="button" value="Up" id="up" />
+    <input type="button" value="Down" id="down" />
+
+
+    <div id="box" style="width:100px;height:100px;background-color:red;position:relative;"></div>
+</body>
+
+</html>

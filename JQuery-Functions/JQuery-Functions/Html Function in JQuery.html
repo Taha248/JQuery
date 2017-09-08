@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Function</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#divFirst").mouseover(function () {
+                var html = $("#divFirst").html();
+                $("#divSec").html(html)
+                $("#divSec").show("slow");
+
+
+
+            });
+
+            $("#divFirst").mouseout(function () {
+                $("#divSec").hide("slow");
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="divFirst" style="height:200px;background-color:orange;">Use Mouseover on me!</div>
+    <div id="divSec" style="height:200px;display:none;background-color:aqua"></div>
+
+</body>
+</html>

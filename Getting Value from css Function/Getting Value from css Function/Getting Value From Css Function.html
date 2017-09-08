@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var fontSize = $("div").css("font-size");
+                var val = '';
+                var i = 0;
+
+                do {
+
+                    val += fontSize.charAt(i);
+                    i++;
+                } while (fontSize.charAt(i) != 'p');
+                var integerFontSize = (parseInt(val)) + 10;
+                $("div").css("font-size", integerFontSize+"px");
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="font-size:30px">Click Button and Get Bigger!</div>
+    <input type="button" value="Increase Size!" id="btn" />
+</body>
+</html>

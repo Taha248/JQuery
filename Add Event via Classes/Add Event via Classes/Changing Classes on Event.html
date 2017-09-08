@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Focus/Blur & Parent/Child
+
+    </title>
+    <style>
+        .class1{
+            background-color:red;
+        }
+        .class2{
+            background-color:orange;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#addbtn").click(function () {
+
+                $("tr").removeClass("class2");
+                $("tr").addClass("class1");
+            });
+                $("#rembtn").click(function () {
+
+                    $("tr").removeClass("class1");
+                    $("tr").addClass("class2");
+                });
+
+                    $("#togglebtn").click(function () {
+                        $("tr").toggleClass("class1  class2");
+                    });
+                    $("#ctogglebtn").click(function(){
+                        if($("tr").hasClass("class1"))
+                        {
+                            $("tr").removeClass("class1");
+                            $("tr").addClass("class2");
+                        }
+                        else {
+                            $("tr").removeClass("class2");
+                            $("tr").addClass("class1");
+                        }
+});
+
+                });
+
+    </script>
+</head>
+<body>
+
+    <input type="button" id="addbtn" value="Add Class" />
+    <input type="button" id="rembtn" value="Remove Class" />
+    <input type="button" id="togglebtn" value="Toggle Class" />
+    <input type="button" id="ctogglebtn" value="Custom Toggle" />
+    <form method="get" action="www.google.com">
+        <table width="100%">
+            
+            <tr>
+                <td>
+                    Type Your Name
+                </td>
+                <td>
+                    <input type="text" />
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Type Your Password
+                </td>
+                <td>
+                    <input type="password" />
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    Type Your Date
+                </td>
+                <td>
+                    <input type="date" />
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td align="center">
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
